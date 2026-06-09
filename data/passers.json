@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-09T15:42:34.474Z",
-  "pass_threshold": 7,
+  "generated_at": "2026-06-09T17:27:58.425Z",
+  "pass_threshold": 8,
   "max_fiscal_year": 2025,
   "companies": [
     {
-      "cik": 320193,
-      "name": "Apple Inc.",
+      "cik": 6951,
+      "name": "APPLIED MATERIALS INC /DE",
       "fiscal_years": [
         "2016",
         "2025"
@@ -15,56 +15,56 @@
         {
           "id": 1,
           "pass": true,
-          "value": 107.64,
+          "value": 40.47,
           "unit": "%"
         },
         {
           "id": 2,
           "pass": true,
-          "value": 21.89,
+          "value": 19.58,
           "unit": "%"
         },
         {
           "id": 3,
-          "pass": false,
-          "value": "8.31 → 7.46",
+          "pass": true,
+          "value": "1.54 → 8.66",
           "unit": "USD/share"
         },
         {
           "id": 4,
           "pass": true,
-          "value": 37.95,
+          "value": 33.3,
           "unit": "%"
         },
         {
           "id": 5,
           "pass": true,
-          "value": 67.07,
+          "value": 71.7,
           "unit": "%",
           "not_applicable": false
         },
         {
           "id": 6,
           "pass": true,
-          "value": 0.7,
+          "value": 0.92,
           "unit": "×"
         },
         {
           "id": 7,
           "pass": true,
-          "value": 7.58,
+          "value": 11.3,
           "unit": "%"
         },
         {
           "id": 8,
-          "pass": false,
-          "value": -1.82,
+          "pass": true,
+          "value": 13.8,
           "unit": "%"
         },
         {
           "id": 9,
-          "pass": false,
-          "value": "8 increases / 1 cuts",
+          "pass": true,
+          "value": "7 increases / 0 cuts",
           "unit": null
         },
         {
@@ -75,7 +75,7 @@
         }
       ],
       "summary": {
-        "pass_count": 7,
+        "pass_count": 10,
         "null_count": 0,
         "total": 10
       },
@@ -88,67 +88,67 @@
           "2025"
         ],
         "roe": [
-          147.44,
-          175.46,
-          171.95,
-          157.41,
-          171.42
+          51.59,
+          53.39,
+          48.04,
+          40.61,
+          35.51
         ],
         "roa": [
-          28.06,
-          28.36,
-          27.5,
-          26.13,
-          30.93
+          24.44,
+          24.83,
+          23.87,
+          22.04,
+          19.79
         ],
         "eps": [
-          5.61,
-          6.11,
-          6.13,
-          6.08,
-          7.46
+          6.4,
+          7.44,
+          8.11,
+          8.61,
+          8.66
         ],
         "ni_margin": [
-          25.88,
+          25.53,
           25.31,
-          25.31,
-          23.97,
-          26.92
+          25.86,
+          26.41,
+          24.67
         ],
         "gp_margin": [
-          41.78,
-          43.31,
-          44.13,
-          46.21,
-          46.91
+          47.32,
+          46.51,
+          46.7,
+          47.46,
+          48.67
         ],
         "ltd_ni": [
-          1.15,
-          0.99,
-          0.98,
-          0.91,
-          0.7
+          0.93,
+          0.84,
+          0.8,
+          0.76,
+          0.92
         ],
         "revenue": [
-          365817000000,
-          394328000000,
-          383285000000,
-          391035000000,
-          416161000000
+          23063000000,
+          25785000000,
+          26517000000,
+          27176000000,
+          28368000000
         ],
         "dps": [
-          0.85,
-          0.9,
-          0.94,
-          0.98,
-          1.02
+          0.22,
+          0.24,
+          0.26,
+          0.32,
+          0.4
         ],
         "buybacks": [
-          85971000000,
-          89402000000,
-          77550000000,
-          94949000000,
-          90711000000
+          3750000000,
+          6103000000,
+          2189000000,
+          3823000000,
+          4895000000
         ]
       },
       "data_quality": null
@@ -304,8 +304,8 @@
       "data_quality": null
     },
     {
-      "cik": 19617,
-      "name": "JPMORGAN CHASE & CO",
+      "cik": 42888,
+      "name": "GRACO INC.",
       "fiscal_years": [
         "2016",
         "2025"
@@ -315,25 +315,3177 @@
         {
           "id": 1,
           "pass": true,
-          "value": 13.62,
+          "value": 27.94,
           "unit": "%"
         },
         {
           "id": 2,
-          "pass": false,
-          "value": 1.21,
+          "pass": true,
+          "value": 17.7,
           "unit": "%"
         },
         {
           "id": 3,
           "pass": true,
-          "value": "6.19 → 20.02",
+          "value": "0.24 → 3.08",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 19.47,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 52.46,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 5.95,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 19.34,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          29.39,
+          25.81,
+          24.81,
+          20.22,
+          19.92
+        ],
+        "roa": [
+          19.85,
+          18.87,
+          19.63,
+          16.59,
+          16.27
+        ],
+        "eps": [
+          2.52,
+          2.66,
+          2.94,
+          2.82,
+          3.08
+        ],
+        "ni_margin": [
+          22.13,
+          21.49,
+          23.07,
+          23,
+          23.33
+        ],
+        "gp_margin": [
+          52.02,
+          49.33,
+          52.88,
+          53.11,
+          52.45
+        ],
+        "ltd_ni": [
+          0.17,
+          0.16,
+          0,
+          null,
+          null
+        ],
+        "revenue": [
+          1987608000,
+          2143521000,
+          2195606000,
+          2113316000,
+          2236604000
+        ],
+        "dps": [
+          0.7725,
+          0.865,
+          0.96,
+          1.04,
+          1.12
+        ],
+        "buybacks": [
+          0,
+          233426000,
+          102344000,
+          31350000,
+          423108000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 49826,
+      "name": "ILLINOIS TOOL WORKS INC",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 76.48,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 16.83,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "5.7 → 10.49",
           "unit": "USD/share"
         },
         {
           "id": 4,
           "pass": true,
-          "value": 30,
+          "value": 26.38,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.18,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": false,
+          "value": 1.85,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 12.56,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          79.14,
+          90.36,
+          96.92,
+          110.21,
+          93.72
+        ],
+        "roa": [
+          17,
+          19.26,
+          19.11,
+          22.81,
+          19.64
+        ],
+        "eps": [
+          8.51,
+          9.77,
+          9.74,
+          11.71,
+          10.49
+        ],
+        "ni_margin": [
+          18.64,
+          19.04,
+          18.36,
+          21.94,
+          19.11
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          2.56,
+          2.03,
+          2.14,
+          1.81,
+          2.18
+        ],
+        "revenue": [
+          14455000000,
+          15932000000,
+          16107000000,
+          15898000000,
+          16044000000
+        ],
+        "dps": [
+          4.72,
+          5.06,
+          5.42,
+          5.8,
+          6.22
+        ],
+        "buybacks": [
+          1000000000,
+          1750000000,
+          1500000000,
+          1500000000,
+          1500000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 59478,
+      "name": "ELI LILLY & Co",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 70.63,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 11.86,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.58 → 22.95",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 20.15,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.98,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 13.28,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 52.9,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          76.35,
+          63.63,
+          48.92,
+          84.57,
+          101.16
+        ],
+        "roa": [
+          11.7,
+          12.71,
+          9.23,
+          14.84,
+          21.59
+        ],
+        "eps": [
+          6.12,
+          6.9,
+          5.8,
+          11.71,
+          22.95
+        ],
+        "ni_margin": [
+          19.71,
+          21.88,
+          15.36,
+          23.51,
+          31.67
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          2.75,
+          2.36,
+          3.5,
+          2.69,
+          1.98
+        ],
+        "revenue": [
+          28318400000,
+          28541400000,
+          34124000000,
+          45043000000,
+          65179000000
+        ],
+        "dps": [
+          3.53,
+          4.07,
+          4.69,
+          5.4,
+          6.23
+        ],
+        "buybacks": [
+          1250000000,
+          1500000000,
+          750000000,
+          2500000000,
+          4108000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 59527,
+      "name": "LINCOLN ELECTRIC HOLDINGS INC",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 34.82,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 12.74,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.91 → 9.32",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 10.32,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": false,
+          "value": 34.33,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.21,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 7.14,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 17.17,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          33.44,
+          49.76,
+          46.54,
+          35.36,
+          37.22
+        ],
+        "roa": [
+          11.27,
+          16.36,
+          16.63,
+          13.52,
+          14.27
+        ],
+        "eps": [
+          4.6,
+          8.04,
+          9.37,
+          8.15,
+          9.32
+        ],
+        "ni_margin": [
+          8.55,
+          12.56,
+          13.01,
+          11.63,
+          12.3
+        ],
+        "gp_margin": [
+          33.04,
+          34.05,
+          34.96,
+          36.74,
+          36.25
+        ],
+        "ltd_ni": [
+          2.59,
+          2.35,
+          2.02,
+          2.47,
+          2.21
+        ],
+        "revenue": [
+          3234180000,
+          3761211000,
+          4191636000,
+          4008670000,
+          4233003000
+        ],
+        "dps": [
+          2.09,
+          2.32,
+          2.63,
+          2.88,
+          3.04
+        ],
+        "buybacks": [
+          164526000,
+          181293000,
+          198765000,
+          263751000,
+          338308000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 68505,
+      "name": "MOTOROLA SOLUTIONS, INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 341.72,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 9.2,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.24 → 12.75",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 15.21,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 87.07,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 3.91,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 28.85,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 26.21,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          -416.39,
+          3586.84,
+          406.9,
+          129.95,
+          104.74
+        ],
+        "roa": [
+          10.8,
+          10.9,
+          13.07,
+          11.29,
+          12.68
+        ],
+        "eps": [
+          7.17,
+          7.93,
+          9.93,
+          9.23,
+          12.75
+        ],
+        "ni_margin": [
+          15.24,
+          14.96,
+          17.13,
+          14.58,
+          18.44
+        ],
+        "gp_margin": [
+          49.44,
+          46.41,
+          49.81,
+          50.96,
+          51.66
+        ],
+        "ltd_ni": [
+          4.57,
+          4.41,
+          2.75,
+          3.6,
+          3.91
+        ],
+        "revenue": [
+          8171000000,
+          9112000000,
+          9978000000,
+          10817000000,
+          11682000000
+        ],
+        "dps": [
+          2.92,
+          3.25,
+          3.62,
+          4.03,
+          4.48
+        ],
+        "buybacks": [
+          528000000,
+          836000000,
+          804000000,
+          244000000,
+          1154000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 90185,
+      "name": "SIGMA ALDRICH CORP",
+      "fiscal_years": [
+        "2007",
+        "2014"
+      ],
+      "fy_count": 8,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 20.34,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.23,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.34 → 4.17",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 376.57,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 1149.26,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0.66,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 4.56,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": false,
+          "value": 8.66,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "7 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "8/8",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2010",
+          "2011",
+          "2012",
+          "2013",
+          "2014"
+        ],
+        "roe": [
+          20.97,
+          21.89,
+          19.39,
+          18.05,
+          16.6
+        ],
+        "roa": [
+          13.38,
+          14.49,
+          12.96,
+          12.88,
+          12.5
+        ],
+        "eps": [
+          3.12,
+          3.72,
+          3.77,
+          4.06,
+          4.17
+        ],
+        "ni_margin": [
+          984.62,
+          952.08,
+          17.54,
+          18.16,
+          17.95
+        ],
+        "gp_margin": [
+          3066.67,
+          2758.33,
+          51.35,
+          50.33,
+          50.95
+        ],
+        "ltd_ni": [
+          null,
+          0.66,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          39000000,
+          48000000,
+          2623000000,
+          2704000000,
+          2785000000
+        ],
+        "dps": [
+          0.64,
+          0.72,
+          0.8,
+          0.86,
+          0.92
+        ],
+        "buybacks": [
+          99000000,
+          134000000,
+          124000000,
+          146000000,
+          85000000
+        ]
+      },
+      "data_quality": [
+        "partial_history"
+      ]
+    },
+    {
+      "cik": 97476,
+      "name": "TEXAS INSTRUMENTS INCORPORATED",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 47.78,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 25.35,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.48 → 5.45",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 34.26,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 63.32,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.71,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": false,
+          "value": 3.15,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": false,
+          "value": 9.26,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          69,
+          62.69,
+          41.37,
+          28.4,
+          30.15
+        ],
+        "roa": [
+          35.29,
+          33.73,
+          21.86,
+          14.14,
+          14.27
+        ],
+        "eps": [
+          8.26,
+          9.41,
+          7.07,
+          5.2,
+          5.45
+        ],
+        "ni_margin": [
+          42.35,
+          43.68,
+          37.16,
+          30.68,
+          28.28
+        ],
+        "gp_margin": [
+          67.47,
+          68.76,
+          62.9,
+          58.14,
+          57.02
+        ],
+        "ltd_ni": [
+          0.93,
+          0.94,
+          1.63,
+          2.68,
+          2.71
+        ],
+        "revenue": [
+          18344000000,
+          20028000000,
+          17519000000,
+          15641000000,
+          17682000000
+        ],
+        "dps": [
+          4.21,
+          4.69,
+          5.02,
+          5.26,
+          5.5
+        ],
+        "buybacks": [
+          527000000,
+          3615000000,
+          293000000,
+          929000000,
+          1477000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 105132,
+      "name": "WD-40 COMPANY",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 36.9,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 16.95,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.64 → 6.69",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 13.79,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 53.98,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0.95,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 5.57,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 15.15,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          38.94,
+          34.62,
+          33.1,
+          31.61,
+          36.49
+        ],
+        "roa": [
+          17.72,
+          15.58,
+          15.13,
+          15.7,
+          19.68
+        ],
+        "eps": [
+          5.09,
+          4.9,
+          4.83,
+          5.11,
+          6.69
+        ],
+        "ni_margin": [
+          14.39,
+          12.98,
+          12.28,
+          11.79,
+          14.68
+        ],
+        "gp_margin": [
+          54.03,
+          49.1,
+          51.04,
+          53.38,
+          55.06
+        ],
+        "ltd_ni": [
+          1.64,
+          1.59,
+          1.66,
+          1.23,
+          0.95
+        ],
+        "revenue": [
+          488109000,
+          518820000,
+          537255000,
+          590557000,
+          619985000
+        ],
+        "dps": [
+          2.78,
+          3.06,
+          3.27,
+          3.47,
+          3.7
+        ],
+        "buybacks": [
+          0,
+          29156000,
+          10434000,
+          8094000,
+          12314000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 109563,
+      "name": "APPLIED INDUSTRIAL TECHNOLOGIES, INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 17.54,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 8.41,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "0.75 → 10.12",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 18.86,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 355.5,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.46,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 81.37,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 24.6,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          16.3,
+          24.73,
+          26.59,
+          24.51,
+          22.24
+        ],
+        "roa": [
+          6.36,
+          10.9,
+          13.35,
+          13.55,
+          12.83
+        ],
+        "eps": [
+          3.68,
+          6.58,
+          8.84,
+          9.83,
+          10.12
+        ],
+        "ni_margin": [
+          4.47,
+          6.76,
+          7.86,
+          8.61,
+          8.61
+        ],
+        "gp_margin": [
+          28.91,
+          29.05,
+          29.16,
+          29.84,
+          30.31
+        ],
+        "ltd_ni": [
+          5.42,
+          2.52,
+          1.72,
+          1.48,
+          1.46
+        ],
+        "revenue": [
+          3235919000,
+          3810676000,
+          4412794000,
+          4479406000,
+          4563424000
+        ],
+        "dps": [
+          1.3,
+          1.34,
+          1.38,
+          1.44,
+          1.66
+        ],
+        "buybacks": [
+          40089000,
+          13784000,
+          716000,
+          73388000,
+          152837000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 200406,
+      "name": "Johnson & Johnson",
+      "fiscal_years": [
+        "2015",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 25.98,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 10.42,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "1.53 → 11.03",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 21.56,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 68.04,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.47,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 18.42,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 32.68,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": false,
+          "value": "7 increases / 1 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          23.97,
+          30.41,
+          46.61,
+          18.97,
+          35.03
+        ],
+        "roa": [
+          8.85,
+          11.7,
+          20.11,
+          8.09,
+          14.13
+        ],
+        "eps": [
+          5.51,
+          7.81,
+          13.72,
+          5.79,
+          11.03
+        ],
+        "ni_margin": [
+          17.82,
+          26.52,
+          41.28,
+          15.84,
+          28.46
+        ],
+        "gp_margin": [
+          65.58,
+          70.28,
+          68.82,
+          69.07,
+          67.88
+        ],
+        "ltd_ni": [
+          2.22,
+          1.44,
+          0.74,
+          2.18,
+          1.47
+        ],
+        "revenue": [
+          82584000000,
+          78740000000,
+          85159000000,
+          88821000000,
+          94193000000
+        ],
+        "dps": [
+          1.01,
+          4.19,
+          4.7,
+          4.91,
+          5.14
+        ],
+        "buybacks": [
+          3221000000,
+          3456000000,
+          5054000000,
+          2432000000,
+          5953000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 277135,
+      "name": "W.W. GRAINGER, INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 49.04,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 16.26,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "9.87 → 35.4",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 8.17,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": false,
+          "value": 38.54,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.38,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 6.55,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 16.18,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          56.35,
+          71.72,
+          65.85,
+          58.98,
+          48.1
+        ],
+        "roa": [
+          16.19,
+          21.82,
+          23.25,
+          22.49,
+          19.18
+        ],
+        "eps": [
+          19.84,
+          30.06,
+          36.23,
+          38.71,
+          35.4
+        ],
+        "ni_margin": [
+          8.01,
+          10.16,
+          11.1,
+          11.12,
+          9.51
+        ],
+        "gp_margin": [
+          36.25,
+          38.41,
+          39.42,
+          39.36,
+          39.06
+        ],
+        "ltd_ni": [
+          2.26,
+          1.48,
+          1.24,
+          1.19,
+          1.38
+        ],
+        "revenue": [
+          13022000000,
+          15228000000,
+          16478000000,
+          17168000000,
+          17942000000
+        ],
+        "dps": [
+          6.39,
+          6.78,
+          7.3,
+          8.01,
+          8.83
+        ],
+        "buybacks": [
+          695000000,
+          603000000,
+          850000000,
+          1201000000,
+          1045000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 315293,
+      "name": "Aon plc",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 97.29,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 5.99,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "5.16 → 17.02",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 22.66,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 3.97,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 6.92,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 17.17,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          55.09,
+          973.31,
+          -378.45,
+          100.25,
+          47.76
+        ],
+        "roa": [
+          3.92,
+          8.01,
+          7.69,
+          6.4,
+          7.41
+        ],
+        "eps": [
+          5.55,
+          12.14,
+          12.51,
+          12.49,
+          17.02
+        ],
+        "ni_margin": [
+          10.29,
+          20.75,
+          19.17,
+          16.91,
+          21.51
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          6.56,
+          3.79,
+          3.9,
+          6.13,
+          3.97
+        ],
+        "revenue": [
+          12193000000,
+          12479000000,
+          13376000000,
+          15698000000,
+          17181000000
+        ],
+        "dps": [
+          1.99,
+          2.19,
+          2.41,
+          2.64,
+          2.91
+        ],
+        "buybacks": [
+          3543000000,
+          3203000000,
+          2700000000,
+          1000000000,
+          1000000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 319201,
+      "name": "KLA CORPORATION",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 92.71,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 19.6,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "4.49 → 30.37",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 27.67,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": false,
+          "value": 16.51,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.85,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 16.89,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 25.3,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          68.78,
+          139.02,
+          156.78,
+          87.85,
+          100.78
+        ],
+        "roa": [
+          21.26,
+          29.05,
+          25.4,
+          18.72,
+          25.79
+        ],
+        "eps": [
+          13.37,
+          21.92,
+          24.15,
+          20.28,
+          30.37
+        ],
+        "ni_margin": [
+          30.04,
+          36.06,
+          32.27,
+          28.15,
+          33.41
+        ],
+        "gp_margin": [
+          15.81,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          6918734000,
+          9211883000,
+          10496056000,
+          9812247000,
+          12156162000
+        ],
+        "dps": [
+          3.6,
+          4.2,
+          5.2,
+          5.65,
+          6.75
+        ],
+        "buybacks": [
+          938607000,
+          3967806000,
+          1311864000,
+          1735746000,
+          2149946000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 350894,
+      "name": "SEI INVESTMENTS COMPANY",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 27.85,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 22.31,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.03 → 5.63",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 45.28,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 51.04,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": null,
+          "value": null,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 5.64,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 13.05,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": false,
+          "value": "8 increases / 1 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          30.36,
+          24.93,
+          22.63,
+          26.51,
+          30.44
+        ],
+        "roa": [
+          24.18,
+          20.07,
+          18.85,
+          22.33,
+          null
+        ],
+        "eps": [
+          3.81,
+          3.46,
+          3.46,
+          4.41,
+          5.63
+        ],
+        "ni_margin": [
+          28.49,
+          23.88,
+          24.08,
+          27.35,
+          31.14
+        ],
+        "gp_margin": [
+          33.64,
+          32.34,
+          29,
+          32.91,
+          35.18
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          1918309000,
+          1991037000,
+          1919793000,
+          2125151000,
+          2297381000
+        ],
+        "dps": [
+          0.77,
+          0.83,
+          0.89,
+          0.95,
+          0.49
+        ],
+        "buybacks": [
+          408069000,
+          344723000,
+          308854000,
+          500061000,
+          628135000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 723531,
+      "name": "Paychex, Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 42.65,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.39,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.09 → 4.58",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 28.6,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.74,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 7.31,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 36.3,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          38.31,
+          46.17,
+          47.35,
+          46.35,
+          41.8
+        ],
+        "roa": [
+          12.35,
+          14.77,
+          15.43,
+          16.15,
+          12.3
+        ],
+        "eps": [
+          3.03,
+          3.84,
+          4.3,
+          4.67,
+          4.58
+        ],
+        "ni_margin": [
+          27.05,
+          30.2,
+          31.1,
+          32.03,
+          29.74
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          0.73,
+          0.57,
+          0.51,
+          0.47,
+          2.74
+        ],
+        "revenue": [
+          4056800000,
+          4611700000,
+          5007100000,
+          5278300000,
+          5571700000
+        ],
+        "dps": [
+          2.52,
+          2.77,
+          3.26,
+          3.65,
+          4.02
+        ],
+        "buybacks": [
+          155700000,
+          145200000,
+          0,
+          169200000,
+          104500000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 737758,
+      "name": "THE TORO COMPANY",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 34.61,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.79,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.06 → 3.17",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 17.32,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 62.43,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.92,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 7.3,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": false,
+          "value": 5.48,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          36.18,
+          35.42,
+          23.04,
+          27.35,
+          21.04
+        ],
+        "roa": [
+          14.16,
+          13.66,
+          9.16,
+          11.59,
+          9
+        ],
+        "eps": [
+          3.78,
+          4.2,
+          3.13,
+          4.01,
+          3.17
+        ],
+        "ni_margin": [
+          10.35,
+          9.82,
+          7.24,
+          9.14,
+          7.01
+        ],
+        "gp_margin": [
+          33.8,
+          33.33,
+          34.65,
+          33.8,
+          33.36
+        ],
+        "ltd_ni": [
+          1.69,
+          2.24,
+          3.13,
+          2.18,
+          2.92
+        ],
+        "revenue": [
+          3959600000,
+          4514700000,
+          4553200000,
+          4583800000,
+          4510400000
+        ],
+        "dps": [
+          1.05,
+          1.2,
+          1.36,
+          1.44,
+          1.52
+        ],
+        "buybacks": [
+          302300000,
+          140000000,
+          60000000,
+          245500000,
+          290000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 745732,
+      "name": "Ross Stores, Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 39.95,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 16.94,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.51 → 6.32",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 8.48,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0.72,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 6.55,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 11.4,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "8 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          2.57,
+          46.87,
+          36.22,
+          40.93,
+          40.28
+        ],
+        "roa": [
+          0.77,
+          13.07,
+          11.18,
+          13.53,
+          14.32
+        ],
+        "eps": [
+          0.24,
+          4.87,
+          4.38,
+          5.56,
+          6.32
+        ],
+        "ni_margin": [
+          0.68,
+          9.11,
+          8.09,
+          9.2,
+          9.89
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          28.67,
+          1.42,
+          1.62,
+          1.18,
+          0.72
+        ],
+        "revenue": [
+          12531565000,
+          18916244000,
+          18695829000,
+          20376941000,
+          21129219000
+        ],
+        "dps": [
+          0.285,
+          0.31,
+          1.24,
+          1.34,
+          1.47
+        ],
+        "buybacks": [
+          132467000,
+          649997000,
+          949996000,
+          949996000,
+          1049979000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 779152,
+      "name": "JACK HENRY & ASSOCIATES, INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 23.49,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 14.11,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.12 → 6.24",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 30.36,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 6.44,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 11.65,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          21.71,
+          26.87,
+          24.52,
+          22.13,
+          22.94
+        ],
+        "roa": [
+          13.07,
+          15.15,
+          14.02,
+          13.4,
+          15.27
+        ],
+        "eps": [
+          4.12,
+          4.94,
+          5.02,
+          5.23,
+          6.24
+        ],
+        "ni_margin": [
+          17.71,
+          18.68,
+          17.65,
+          17.23,
+          19.19
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          0.75,
+          0.16,
+          0
+        ],
+        "revenue": [
+          1758225000,
+          1942884000,
+          2077702000,
+          2215543000,
+          2375288000
+        ],
+        "dps": [
+          1.78,
+          1.9,
+          2.02,
+          2.14,
+          2.26
+        ],
+        "buybacks": [
+          431529000,
+          193916000,
+          25000000,
+          28055000,
+          35051000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 789019,
+      "name": "MICROSOFT CORPORATION",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 36.05,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 15.44,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.56 → 13.64",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 30.55,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 67.23,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0.39,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 13.36,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 20.52,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": false,
+          "value": "8 increases / 1 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          47.08,
+          47.15,
+          38.82,
+          37.13,
+          33.28
+        ],
+        "roa": [
+          19.3,
+          20.82,
+          18.63,
+          19.07,
+          18
+        ],
+        "eps": [
+          8.05,
+          9.65,
+          9.68,
+          11.8,
+          13.64
+        ],
+        "ni_margin": [
+          36.45,
+          36.69,
+          34.15,
+          35.96,
+          36.15
+        ],
+        "gp_margin": [
+          68.93,
+          68.4,
+          68.92,
+          69.76,
+          68.82
+        ],
+        "ltd_ni": [
+          0.82,
+          0.65,
+          0.58,
+          0.48,
+          0.39
+        ],
+        "revenue": [
+          168088000000,
+          198270000000,
+          211915000000,
+          245122000000,
+          281724000000
+        ],
+        "dps": [
+          2.24,
+          2.48,
+          2.72,
+          0.75,
+          0.83
+        ],
+        "buybacks": [
+          27385000000,
+          32696000000,
+          22245000000,
+          17254000000,
+          18420000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 795403,
+      "name": "WATTS WATER TECHNOLOGIES INC",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 15.12,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 9.11,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.44 → 10.17",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 9.65,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 43.74,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0.58,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 6.37,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 17.87,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          14.77,
+          20.33,
+          18.63,
+          18.08,
+          18.25
+        ],
+        "roa": [
+          9.22,
+          13.28,
+          12.36,
+          12.37,
+          12.91
+        ],
+        "eps": [
+          4.88,
+          7.48,
+          7.82,
+          8.69,
+          10.17
+        ],
+        "ni_margin": [
+          9.16,
+          12.71,
+          12.75,
+          12.93,
+          13.98
+        ],
+        "gp_margin": [
+          42.4,
+          44.17,
+          46.73,
+          47.15,
+          49.46
+        ],
+        "ltd_ni": [
+          0.86,
+          0.59,
+          1.14,
+          0.68,
+          0.58
+        ],
+        "revenue": [
+          1809200000,
+          1979500000,
+          2056300000,
+          2252200000,
+          2438500000
+        ],
+        "dps": [
+          1.01,
+          1.16,
+          1.38,
+          1.65,
+          1.99
+        ],
+        "buybacks": [
+          16000000,
+          69400000,
+          16000000,
+          17000000,
+          16000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 814547,
+      "name": "Fair Isaac Corp",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 33.48,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 20.44,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.39 → 26.54",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 41.18,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 59.31,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 4.07,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 9.48,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": null,
+          "value": null,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": null,
+          "value": null,
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 2,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          356.21,
+          -81.84,
+          -57.64,
+          -62.13,
+          -48.14
+        ],
+        "roa": [
+          24.71,
+          24.82,
+          28.46,
+          31.14,
+          36.36
+        ],
+        "eps": [
+          13.4,
+          14.18,
+          16.93,
+          20.45,
+          26.54
+        ],
+        "ni_margin": [
+          29.78,
+          27.12,
+          28.37,
+          29.86,
+          32.75
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          2.57,
+          4.88,
+          4.22,
+          4.28,
+          4.07
+        ],
+        "revenue": [
+          1316536000,
+          1377270000,
+          1513557000,
+          1717526000,
+          1990869000
+        ],
+        "dps": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buybacks": [
+          874179000,
+          1104180000,
+          405526000,
+          821702000,
+          1414502000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 822416,
+      "name": "PULTEGROUP, INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 22.06,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 12.47,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "1.75 → 11.12",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 31.03,
           "unit": "%"
         },
         {
@@ -352,19 +3504,19 @@
         {
           "id": 7,
           "pass": true,
-          "value": 7.32,
+          "value": 31.9,
           "unit": "%"
         },
         {
           "id": 8,
           "pass": true,
-          "value": 15.66,
+          "value": 14.22,
           "unit": "%"
         },
         {
           "id": 9,
           "pass": true,
-          "value": "9 increases / 0 cuts",
+          "value": "8 increases / 0 cuts",
           "unit": null
         },
         {
@@ -375,7 +3527,7 @@
         }
       ],
       "summary": {
-        "pass_count": 7,
+        "pass_count": 8,
         "null_count": 2,
         "total": 10
       },
@@ -388,32 +3540,32 @@
           "2025"
         ],
         "roe": [
-          16.86,
-          12.85,
-          15.98,
-          17.39,
-          16.13
+          27.69,
+          31.91,
+          26.97,
+          27.4,
+          17.67
         ],
         "roa": [
-          1.36,
-          1.02,
-          1.31,
-          1.48,
-          1.35
+          15.23,
+          18.6,
+          16.85,
+          18.43,
+          12.53
         ],
         "eps": [
-          15.36,
-          12.09,
-          16.23,
-          19.75,
-          20.02
+          7.43,
+          11.01,
+          11.72,
+          14.69,
+          11.12
         ],
         "ni_margin": [
-          39.73,
-          29.28,
-          31.34,
-          32.93,
-          31.27
+          14.17,
+          16.36,
+          16.2,
+          17.18,
+          12.82
         ],
         "gp_margin": [
           null,
@@ -430,25 +3582,1675 @@
           null
         ],
         "revenue": [
-          121649000000,
-          128695000000,
-          158104000000,
-          177556000000,
-          182447000000
+          13736995000,
+          16002979000,
+          16061578000,
+          17946950000,
+          17311953000
         ],
         "dps": [
-          3.8,
-          4,
-          4.1,
-          4.8,
-          5.8
+          0.57,
+          0.61,
+          0.68,
+          0.82,
+          0.92
         ],
         "buybacks": [
-          18408000000,
-          3162000000,
-          9824000000,
-          18830000000,
-          31591000000
+          897303000,
+          1074673000,
+          1000000000,
+          1199999000,
+          1199996000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 896878,
+      "name": "INTUIT INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 35.48,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 17.71,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.69 → 13.67",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 20.16,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.54,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 16.69,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 20.51,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          27.54,
+          15.71,
+          14.14,
+          16.6,
+          20.29
+        ],
+        "roa": [
+          15.59,
+          9.55,
+          8.59,
+          9.89,
+          11.2
+        ],
+        "eps": [
+          7.56,
+          7.28,
+          8.42,
+          10.43,
+          13.67
+        ],
+        "ni_margin": [
+          21.41,
+          16.23,
+          16.59,
+          18.19,
+          20.55
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          0.99,
+          3.11,
+          2.57,
+          1.87,
+          1.54
+        ],
+        "revenue": [
+          9633000000,
+          12726000000,
+          14368000000,
+          16285000000,
+          18831000000
+        ],
+        "dps": [
+          2.36,
+          2.72,
+          3.12,
+          3.6,
+          4.16
+        ],
+        "buybacks": [
+          1005000000,
+          1861000000,
+          1967000000,
+          1988000000,
+          2772000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 920371,
+      "name": "Simpson Manufacturing Co., Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 18.06,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.31,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "1.86 → 8.24",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 13.61,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 45.75,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": null,
+          "value": null,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 11.72,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 15.12,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          24.61,
+          25.72,
+          22.89,
+          18.49,
+          18
+        ],
+        "roa": [
+          19.62,
+          16.75,
+          13.59,
+          11.84,
+          11.88
+        ],
+        "eps": [
+          6.12,
+          7.76,
+          8.26,
+          7.6,
+          8.24
+        ],
+        "ni_margin": [
+          16.94,
+          15.78,
+          15.99,
+          14.44,
+          14.79
+        ],
+        "gp_margin": [
+          47.99,
+          44.48,
+          47.05,
+          45.87,
+          45.85
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          1573217000,
+          2116087000,
+          2213803000,
+          2232139000,
+          2332808000
+        ],
+        "dps": [
+          0.98,
+          1.03,
+          1.07,
+          1.11,
+          1.15
+        ],
+        "buybacks": [
+          24125000,
+          78622000,
+          50000000,
+          100000000,
+          119999000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 943819,
+      "name": "ResMed Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 21.78,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.32,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.49 → 9.51",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 19.26,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 57.45,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 3.15,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 12.12,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 24.03,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "8 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": false,
+          "value": "5/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 0,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          17.63,
+          24.96,
+          23.96,
+          22.7,
+          25.86
+        ],
+        "roa": [
+          10.19,
+          15.87,
+          15.15,
+          14.99,
+          18.62
+        ],
+        "eps": [
+          3.24,
+          5.3,
+          6.09,
+          6.92,
+          9.51
+        ],
+        "ni_margin": [
+          14.84,
+          21.78,
+          21.25,
+          21.79,
+          27.22
+        ],
+        "gp_margin": [
+          57.53,
+          56.57,
+          55.78,
+          56.67,
+          59.36
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          3196825000,
+          3578127000,
+          4222993000,
+          4685297000,
+          5146327000
+        ],
+        "dps": [
+          1.56,
+          1.68,
+          1.76,
+          1.92,
+          2.12
+        ],
+        "buybacks": [
+          null,
+          0,
+          0,
+          150011000,
+          300025000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1059556,
+      "name": "Moody’s Corporation",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 260.02,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.03,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "1.36 → 13.67",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 37.61,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 2.84,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 28.36,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 15.95,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": false,
+          "value": "8 increases / 1 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          103.07,
+          52.38,
+          55.06,
+          59.8,
+          64.55
+        ],
+        "roa": [
+          16.35,
+          9.47,
+          11.09,
+          13.66,
+          15.69
+        ],
+        "eps": [
+          11.78,
+          7.44,
+          8.73,
+          11.26,
+          13.67
+        ],
+        "ni_margin": [
+          35.61,
+          25.13,
+          27.16,
+          29.03,
+          31.86
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          3.35,
+          5.38,
+          4.36,
+          3.27,
+          2.84
+        ],
+        "revenue": [
+          6218000000,
+          5468000000,
+          5916000000,
+          7088000000,
+          7718000000
+        ],
+        "dps": [
+          0.62,
+          0.7,
+          0.77,
+          0.85,
+          0.94
+        ],
+        "buybacks": [
+          750000000,
+          983000000,
+          490000000,
+          1292000000,
+          1607000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1121788,
+      "name": "GARMIN LTD",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 18.51,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 14.58,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.73 → 8.59",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 28.73,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 79.67,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": null,
+          "value": null,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 31.32,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 19.49,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "7 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          18.61,
+          15.81,
+          19.52,
+          19,
+          19.78
+        ],
+        "roa": [
+          14.54,
+          12.49,
+          15.79,
+          15.48,
+          16.14
+        ],
+        "eps": [
+          5.61,
+          5.04,
+          6.71,
+          7.3,
+          8.59
+        ],
+        "ni_margin": [
+          21.72,
+          20.03,
+          24.67,
+          22.41,
+          22.96
+        ],
+        "gp_margin": [
+          58.01,
+          57.75,
+          57.48,
+          58.7,
+          58.74
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          4982795000,
+          4860286000,
+          5228252000,
+          6296903000,
+          7245519000
+        ],
+        "dps": [
+          2.68,
+          2.92,
+          2.92,
+          3,
+          3.6
+        ],
+        "buybacks": [
+          30985000,
+          22730000,
+          22815000,
+          42117000,
+          57194000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1141391,
+      "name": "Mastercard Inc",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 128.68,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 23.95,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "0.86 → 16.52",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 42.63,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.22,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 33.43,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 22,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": false,
+          "value": "6 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          126.79,
+          145.92,
+          169.27,
+          191.95,
+          210.49
+        ],
+        "roa": [
+          24.38,
+          26,
+          27.58,
+          28.44,
+          29.28
+        ],
+        "eps": [
+          8.76,
+          10.22,
+          11.83,
+          13.89,
+          16.52
+        ],
+        "ni_margin": [
+          46,
+          44.66,
+          44.61,
+          45.71,
+          45.65
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          1.51,
+          1.38,
+          1.28,
+          1.36,
+          1.22
+        ],
+        "revenue": [
+          18884000000,
+          22237000000,
+          25098000000,
+          28167000000,
+          32791000000
+        ],
+        "dps": [
+          null,
+          2.04,
+          2.37,
+          2.74,
+          3.15
+        ],
+        "buybacks": [
+          5904000000,
+          8753000000,
+          9032000000,
+          10954000000,
+          11727000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1158895,
+      "name": "LEMAITRE VASCULAR, INC.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 13.63,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": false,
+          "value": 10.82,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "0.55 → 2.52",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 21.16,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": true,
+          "value": 92.07,
+          "unit": "%",
+          "not_applicable": false
+        },
+        {
+          "id": 6,
+          "pass": null,
+          "value": null,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 32.19,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 24.35,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          12.61,
+          7.9,
+          10.64,
+          13.87,
+          15.8
+        ],
+        "roa": [
+          9.86,
+          6.84,
+          9.16,
+          9.8,
+          9.89
+        ],
+        "eps": [
+          1.25,
+          0.93,
+          1.34,
+          1.93,
+          2.52
+        ],
+        "ni_margin": [
+          17.42,
+          12.77,
+          15.56,
+          20.03,
+          23.13
+        ],
+        "gp_margin": [
+          65.65,
+          64.89,
+          65.66,
+          68.63,
+          71.53
+        ],
+        "ltd_ni": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "revenue": [
+          154424000,
+          161651000,
+          193484000,
+          219863000,
+          249602000
+        ],
+        "dps": [
+          0.44,
+          0.5,
+          0.56,
+          0.64,
+          0.8
+        ],
+        "buybacks": [
+          802000,
+          642000,
+          853000,
+          1719000,
+          1821000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1326801,
+      "name": "Meta Platforms, Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 26.2,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 19.92,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "3.49 → 23.49",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 32.61,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 0.97,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 24.66,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 17.63,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": false,
+          "value": "1 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          31.1,
+          18.52,
+          28.04,
+          37.14,
+          30.24
+        ],
+        "roa": [
+          24.21,
+          13.19,
+          18.83,
+          24.66,
+          18.83
+        ],
+        "eps": [
+          13.77,
+          8.59,
+          14.87,
+          23.86,
+          23.49
+        ],
+        "ni_margin": [
+          33.38,
+          19.9,
+          28.98,
+          37.91,
+          30.08
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          0,
+          0.43,
+          0.47,
+          0.46,
+          0.97
+        ],
+        "revenue": [
+          117929000000,
+          116609000000,
+          134902000000,
+          164501000000,
+          200966000000
+        ],
+        "dps": [
+          null,
+          null,
+          null,
+          2,
+          2.1
+        ],
+        "buybacks": [
+          44537000000,
+          27956000000,
+          19774000000,
+          30125000000,
+          26248000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1374310,
+      "name": "Cboe Global Markets, Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 21.11,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 12.54,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.27 → 10.42",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 22.29,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 1.31,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": null,
+          "value": null,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 25.29,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "9/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 2,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          15.21,
+          6.65,
+          20.44,
+          18.51,
+          23.36
+        ],
+        "roa": [
+          7.94,
+          3.4,
+          10.51,
+          10.01,
+          12.87
+        ],
+        "eps": [
+          4.92,
+          2.19,
+          7.13,
+          7.21,
+          10.42
+        ],
+        "ni_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          2.46,
+          6.12,
+          1.89,
+          1.88,
+          1.31
+        ],
+        "revenue": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "dps": [
+          1.8,
+          1.96,
+          2.1,
+          2.36,
+          2.7
+        ],
+        "buybacks": [
+          81300000,
+          100900000,
+          83900000,
+          204800000,
+          66700000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1555280,
+      "name": "Zoetis Inc.",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 56.44,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 14.34,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "1.65 → 6.02",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": true,
+          "value": 24.1,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 3.38,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 7.62,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 15.92,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 9,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          49.01,
+          47.25,
+          49.86,
+          50.91,
+          65.99
+        ],
+        "roa": [
+          14.81,
+          14.67,
+          16.05,
+          17.43,
+          18
+        ],
+        "eps": [
+          4.27,
+          4.49,
+          5.07,
+          5.47,
+          6.02
+        ],
+        "ni_margin": [
+          26.2,
+          26.16,
+          27.43,
+          26.86,
+          28.23
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          3.24,
+          3.1,
+          2.8,
+          2.1,
+          3.38
+        ],
+        "revenue": [
+          7776000000,
+          8080000000,
+          8544000000,
+          9256000000,
+          9467000000
+        ],
+        "dps": [
+          1.075,
+          1.35,
+          1.557,
+          1.796,
+          2.03
+        ],
+        "buybacks": [
+          743000000,
+          1594000000,
+          1092000000,
+          1858000000,
+          248000000
+        ]
+      },
+      "data_quality": null
+    },
+    {
+      "cik": 1579241,
+      "name": "Allegion plc",
+      "fiscal_years": [
+        "2016",
+        "2025"
+      ],
+      "fy_count": 10,
+      "criteria": [
+        {
+          "id": 1,
+          "pass": true,
+          "value": 85.63,
+          "unit": "%"
+        },
+        {
+          "id": 2,
+          "pass": true,
+          "value": 13.08,
+          "unit": "%"
+        },
+        {
+          "id": 3,
+          "pass": true,
+          "value": "2.36 → 7.44",
+          "unit": "USD/share"
+        },
+        {
+          "id": 4,
+          "pass": false,
+          "value": 14.05,
+          "unit": "%"
+        },
+        {
+          "id": 5,
+          "pass": null,
+          "value": null,
+          "unit": "%",
+          "not_applicable": true
+        },
+        {
+          "id": 6,
+          "pass": true,
+          "value": 3.08,
+          "unit": "×"
+        },
+        {
+          "id": 7,
+          "pass": true,
+          "value": 6.86,
+          "unit": "%"
+        },
+        {
+          "id": 8,
+          "pass": true,
+          "value": 14.45,
+          "unit": "%"
+        },
+        {
+          "id": 9,
+          "pass": true,
+          "value": "9 increases / 0 cuts",
+          "unit": null
+        },
+        {
+          "id": 10,
+          "pass": true,
+          "value": "10/10",
+          "unit": "yrs"
+        }
+      ],
+      "summary": {
+        "pass_count": 8,
+        "null_count": 1,
+        "total": 10
+      },
+      "trend_5y": {
+        "years": [
+          "2021",
+          "2022",
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "roe": [
+          60.81,
+          53.85,
+          47.82,
+          42.39,
+          36.08
+        ],
+        "roa": [
+          15.78,
+          13.01,
+          13.02,
+          13.58,
+          13.26
+        ],
+        "eps": [
+          5.34,
+          5.19,
+          6.12,
+          6.82,
+          7.44
+        ],
+        "ni_margin": [
+          16.84,
+          14,
+          14.8,
+          15.84,
+          15.83
+        ],
+        "gp_margin": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "ltd_ni": [
+          2.96,
+          4.55,
+          2.97,
+          3.31,
+          3.08
+        ],
+        "revenue": [
+          2867400000,
+          3271900000,
+          3650800000,
+          3772200000,
+          4067300000
+        ],
+        "dps": [
+          1.44,
+          1.64,
+          1.8,
+          1.92,
+          2.04
+        ],
+        "buybacks": [
+          412800000,
+          61000000,
+          59900000,
+          220000000,
+          80000000
         ]
       },
       "data_quality": null

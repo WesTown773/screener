@@ -30,7 +30,15 @@ jobs:
 
       - name: Download zip (only if not cached)
         if: steps.zip-cache.outputs.cache-hit != 'true'
-        run: node bin/ingest.js --download
+        run: |
+          mkdir -p data
+          LOCAL="$HOME/Desktop/fundamental-screener/data/companyfacts.zip"
+          if [ -f "$LOCAL" ]; then
+            echo "Copying zip from local path…"
+            cp "$LOCAL" data/companyfacts.zip
+          else
+            node bin/ingest.js --download
+          fi
         env:
           SEC_USER_AGENT: "fundamental-screener ${{ github.repository_owner }}@users.noreply.github.com"
 

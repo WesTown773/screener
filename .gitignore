@@ -1,4 +1,5 @@
 node_modules/
+public/results.json
 data/companyfacts.zip
 data/companyfacts.zip.tmp
 .env

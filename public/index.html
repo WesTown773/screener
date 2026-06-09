@@ -264,7 +264,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('scan-all-btn').textContent = 'Weekly scan via GitHub Actions';
     document.getElementById('symbol-input').addEventListener('keydown', e => { if (e.key === 'Enter') scanSymbol(); });
     try {
-      const res = await fetch('/results.json');
+      const res = await fetch('https://raw.githubusercontent.com/WesTown773/screener/main/data/results.json');
       if (res.ok) {
         const data = await res.json();
         loadData(data.companies, data.generated_at);

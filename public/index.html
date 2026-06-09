@@ -136,6 +136,7 @@ td.crit-cell{text-align:center;padding:6px 2px}
   main{padding:12px}
 }
 </style>
+  <script src="/screener-browser.js"></script>
 </head>
 <body>
 
@@ -257,12 +258,11 @@ const IS_LOCAL = ['localhost', '127.0.0.1'].includes(window.location.hostname) |
 
 window.addEventListener('DOMContentLoaded', async () => {
   if (!IS_LOCAL) {
-    // Cloud mode (Cloudflare Pages): load static results, disable live scan
-    document.getElementById('scan-btn').disabled = true;
-    document.getElementById('scan-btn').title = 'Live scan requires the local server (node bin/serve.js)';
+    // Cloud mode (Cloudflare Pages): load static results, disable full-market scan only
     document.getElementById('scan-all-btn').disabled = true;
     document.getElementById('scan-all-btn').title = 'Full market scan runs automatically via GitHub Actions each week';
     document.getElementById('scan-all-btn').textContent = 'Weekly scan via GitHub Actions';
+    document.getElementById('symbol-input').addEventListener('keydown', e => { if (e.key === 'Enter') scanSymbol(); });
     try {
       const res = await fetch('/results.json');
       if (res.ok) {
@@ -558,7 +558,7 @@ function renderPagination() {
 
 async function scanSymbol() {
   const input = document.getElementById('symbol-input');
-  const symbol = input.value.trim();
+  const symbol = input.value.trim().toUpperCase();
   if (!symbol) return;
 
   const btn = document.getElementById('scan-btn');
@@ -567,12 +567,30 @@ async function scanSymbol() {
   showModal(`<div style="text-align:center;padding:40px 0"><p style="color:var(--muted)">Scanning ${esc(symbol)}…</p></div>`);
 
   try {
-    const res = await fetch(`/api/scan?symbol=${encodeURIComponent(symbol)}`);
-    const data = await res.json();
-    if (!res.ok) { showModal(`<p style="color:var(--fail)">${esc(data.error)}</p>`); return; }
+    if (!IS_LOCAL) {
+      // Cloud mode: fetch directly from SEC EDGAR
+      const tickersRes = await fetch('https://www.sec.gov/files/company_tickers.json');
+      if (!tickersRes.ok) throw new Error('Could not load ticker list from SEC EDGAR');
+      const tickersRaw = await tickersRes.json();
+      const entry = Object.values(tickersRaw).find(e => e.ticker?.toUpperCase() === symbol);
+      if (!entry) throw new Error(`Unknown ticker: ${symbol}`);
+      const cik = String(entry.cik_str).padStart(10, '0');
 
-    const sc = data.scorecard ?? data.record;
-    showModal(buildScanResult(sc, data.record));
+      const factsRes = await fetch(`https://data.sec.gov/api/xbrl/companyfacts/CIK${cik}.json`);
+      if (!factsRes.ok) throw new Error(`No EDGAR data found for ${symbol}`);
+      const factsData = await factsRes.json();
+
+      const metricsResult = window.ScreenerBrowser.computeMetrics(factsData.facts['us-gaap']);
+      const sc = window.ScreenerBrowser.buildScorecard(metricsResult, { entityName: factsData.entityName, cik: factsData.cik });
+      showModal(buildScanResult(sc, sc));
+    } else {
+      // Local mode: use the server
+      const res = await fetch(`/api/scan?symbol=${encodeURIComponent(symbol)}`);
+      const data = await res.json();
+      if (!res.ok) { showModal(`<p style="color:var(--fail)">${esc(data.error)}</p>`); return; }
+      const sc = data.scorecard ?? data.record;
+      showModal(buildScanResult(sc, data.record));
+    }
   } catch (err) {
     showModal(`<p style="color:var(--fail)">Error: ${esc(err.message)}</p>`);
   } finally {

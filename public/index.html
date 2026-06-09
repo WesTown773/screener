@@ -264,7 +264,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('scan-all-btn').title = 'Full market scan runs automatically via GitHub Actions each week';
     document.getElementById('scan-all-btn').textContent = 'Weekly scan via GitHub Actions';
     try {
-      const res = await fetch('/data/results.json');
+      const res = await fetch('/results.json');
       if (res.ok) {
         const data = await res.json();
         loadData(data.companies, data.generated_at);

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "Bash(chmod +x bin/score.js)",
+      "Bash(node bin/score.js --file tests/fixtures/AAPL.json)",
+      "Bash(node bin/score.js --file tests/fixtures/KO.json)",
+      "Bash(node bin/score.js --file tests/fixtures/JPM.json)",
+      "Bash(curl -s -I -A \"fundamental-screener test eddo@example.com\" \"https://data.sec.gov/files/company_tickers.json\")",
+      "Bash(curl -s -A \"fundamental-screener test eddo@example.com\" \"https://efts.sec.gov/LATEST/search-index?q=%22KO%22&dateRange=custom&startdt=2024-01-01&forms=10-K\")",
+      "Bash(curl -s -A \"fundamental-screener test eddo@example.com\" \"https://www.sec.gov/files/company_tickers.json\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(list\\(d.items\\(\\)\\)[:3]\\)\")",
+      "Bash(curl -s -A 'fundamental-screener test eddo@example.com' 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-K&dateb=&owner=include&count=1')",
+      "Bash(curl -s -I -A 'fundamental-screener test eddo@example.com' https://www.sec.gov/Archives/edgar/daily-index/xbrl/companyfacts.zip)",
+      "Bash(node bin/ingest.js --limit 200 --threshold 8 --out /tmp/screener-smoke)",
+      "Read(//private/tmp/screener-smoke/**)",
+      "Read(//tmp/screener-smoke/**)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('Companies:', len\\(d['companies']\\)\\); [print\\(c['name'], c['summary']\\) for c in d['companies']]\")",
+      "Bash(node bin/ingest.js)",
+      "Bash(node bin/ingest.js --download --zip /tmp/screener-smoke-test.zip)",
+      "Bash(cp /dev/null /tmp/fake-existing.zip)",
+      "Bash(node bin/ingest.js --download --zip /tmp/fake-existing.zip)",
+      "Bash(kill %1)",
+      "Bash(mkdir -p /Users/eddo/Desktop/fundamental-screener/.claude)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls /tmp/screener-smoke/ && cp /tmp/screener-smoke/results.json data/results.json 2>/dev/null && echo \"copied\" || echo \"no smoke data\")",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

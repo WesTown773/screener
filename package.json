@@ -1,0 +1,19 @@
+{
+  "name": "fundamental-screener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  },
+  "dependencies": {
+    "unzipper": "^0.12.3"
+  }
+}

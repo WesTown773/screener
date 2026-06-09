@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fundamental Quality Screener</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pass:#16a34a;--pass-bg:#dcfce7;
+  --fail:#dc2626;--fail-bg:#fee2e2;
+  --na:#6b7280;--na-bg:#f3f4f6;
+  --warn:#d97706;--warn-bg:#fef3c7;
+  --bg:#f1f5f9;--card:#fff;--border:#e2e8f0;
+  --text:#0f172a;--muted:#64748b;--accent:#2563eb;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+a{color:var(--accent)}
+
+/* ── Header ── */
+header{background:#1e293b;color:#f8fafc;padding:0 20px;display:flex;align-items:center;gap:16px;height:56px;flex-wrap:wrap}
+header h1{font-size:16px;font-weight:700;white-space:nowrap;letter-spacing:.3px}
+header h1 span{color:#94a3b8;font-weight:400}
+.header-right{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.scan-input{display:flex;gap:6px;align-items:center}
+.scan-input input{padding:5px 10px;border-radius:6px;border:1px solid #475569;background:#334155;color:#f8fafc;font-size:13px;width:120px;outline:none}
+.scan-input input::placeholder{color:#94a3b8}
+.scan-input input:focus{border-color:#60a5fa}
+button{padding:5px 12px;border-radius:6px;border:none;cursor:pointer;font-size:13px;font-weight:500;transition:opacity .15s}
+button:disabled{opacity:.4;cursor:not-allowed}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover:not(:disabled){background:#1d4ed8}
+.btn-market{background:#7c3aed;color:#fff}
+.btn-market:hover:not(:disabled){background:#6d28d9}
+.btn-sm{padding:3px 8px;font-size:12px}
+
+/* ── Status bar ── */
+#status-bar{padding:6px 20px;font-size:12px;background:#fef9c3;border-bottom:1px solid #fde68a;color:#92400e;display:none}
+#status-bar.error{background:#fee2e2;border-color:#fca5a5;color:#991b1b}
+#status-bar.info{background:#dbeafe;border-color:#93c5fd;color:#1e40af}
+
+/* ── Main layout ── */
+main{padding:16px 20px;max-width:100%}
+.toolbar{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.toolbar input[type=search]{padding:6px 10px;border-radius:6px;border:1px solid var(--border);font-size:13px;width:240px;outline:none}
+.toolbar input[type=search]:focus{border-color:var(--accent)}
+.stats{margin-left:auto;color:var(--muted);font-size:12px}
+select{padding:5px 8px;border-radius:6px;border:1px solid var(--border);font-size:13px;background:#fff;outline:none}
+
+/* ── Table ── */
+.table-wrap{overflow-x:auto;border-radius:8px;border:1px solid var(--border);background:var(--card)}
+table{width:100%;border-collapse:collapse;min-width:900px}
+thead th{padding:8px 10px;text-align:left;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--border);background:#f8fafc;white-space:nowrap;cursor:pointer;user-select:none}
+thead th:hover{color:var(--text)}
+thead th.sorted{color:var(--accent)}
+thead th.criterion{text-align:center;padding:6px 4px;width:64px}
+tbody tr{border-bottom:1px solid var(--border);transition:background .1s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:#f8fafc}
+tbody tr.expanded{background:#f0f9ff}
+tbody tr.detail-row{background:#f8fafc}
+tbody tr.detail-row:hover{background:#f8fafc}
+td{padding:8px 10px;vertical-align:middle}
+td.name-cell{font-weight:500;max-width:220px}
+td.name-cell .ticker{font-size:11px;color:var(--muted);font-weight:400}
+td.score-cell{white-space:nowrap}
+td.crit-cell{text-align:center;padding:6px 2px}
+
+/* ── Score badge ── */
+.score-badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:12px;font-size:12px;font-weight:700}
+.score-high{background:#dcfce7;color:#15803d}
+.score-mid{background:#fef9c3;color:#854d0e}
+.score-low{background:#fee2e2;color:#b91c1c}
+
+/* ── Criterion pill ── */
+.pill{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-size:13px;font-weight:700;cursor:default}
+.pill-pass{background:var(--pass-bg);color:var(--pass)}
+.pill-fail{background:var(--fail-bg);color:var(--fail)}
+.pill-na{background:var(--na-bg);color:var(--na)}
+.pill-warn{background:var(--warn-bg);color:var(--warn)}
+
+/* ── Expand toggle ── */
+.expand-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:16px;padding:0 4px;line-height:1}
+.expand-btn:hover{color:var(--text)}
+
+/* ── Detail panel ── */
+.detail-panel{padding:16px 20px;background:#f8fafc}
+.detail-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.metric-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:12px}
+.metric-card .mc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+.metric-card .mc-name{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.metric-card .mc-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px}
+.mc-pass{background:var(--pass-bg);color:var(--pass)}
+.mc-fail{background:var(--fail-bg);color:var(--fail)}
+.mc-na{background:var(--na-bg);color:var(--na)}
+.metric-card .mc-value{font-size:18px;font-weight:700;color:var(--text);margin-bottom:4px}
+.metric-card .mc-desc{font-size:11px;color:var(--muted);margin-bottom:8px}
+.sparkline-wrap{height:36px;position:relative}
+.sparkline-label{display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:2px}
+.data-warn{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--warn);background:var(--warn-bg);padding:2px 6px;border-radius:4px}
+
+/* ── Progress overlay ── */
+#progress-overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.7);z-index:100;align-items:center;justify-content:center}
+#progress-overlay.active{display:flex}
+.progress-card{background:#fff;border-radius:12px;padding:28px 32px;width:420px;max-width:90vw;text-align:center}
+.progress-card h2{font-size:16px;margin-bottom:4px}
+.progress-card p{color:var(--muted);font-size:13px;margin-bottom:16px}
+.progress-bar-wrap{background:#e2e8f0;border-radius:8px;height:10px;overflow:hidden;margin-bottom:12px}
+.progress-bar{height:100%;background:var(--accent);border-radius:8px;transition:width .3s}
+.progress-stats{display:flex;justify-content:space-around;font-size:12px;color:var(--muted);margin-bottom:16px}
+.progress-stats b{color:var(--text);font-size:14px;display:block}
+#cancel-scan{background:#e2e8f0;color:var(--text)}
+
+/* ── Modal (single scan result) ── */
+#scan-modal{display:none;position:fixed;inset:0;background:rgba(15,23,42,.7);z-index:100;align-items:flex-start;justify-content:center;padding:24px;overflow-y:auto}
+#scan-modal.active{display:flex}
+.modal-card{background:#fff;border-radius:12px;padding:24px;width:700px;max-width:100%;position:relative}
+.modal-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted)}
+.modal-close:hover{color:var(--text)}
+.modal-company{font-size:20px;font-weight:700;margin-bottom:4px}
+.modal-meta{font-size:12px;color:var(--muted);margin-bottom:16px}
+.modal-criteria{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:600px){.modal-criteria{grid-template-columns:1fr}}
+
+/* ── Empty / loading states ── */
+.empty{text-align:center;padding:48px 20px;color:var(--muted)}
+.empty h3{font-size:16px;margin-bottom:8px}
+
+/* ── Criterion tooltip on hover ── */
+[title]{cursor:help}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  header{height:auto;padding:10px 16px}
+  .header-right{width:100%}
+  main{padding:12px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fundamental Quality Screener <span>/ US Equities</span></h1>
+  <div class="header-right">
+    <div class="scan-input">
+      <input type="text" id="symbol-input" placeholder="Ticker (e.g. AAPL)" maxlength="10" autocomplete="off">
+      <button class="btn-primary" id="scan-btn" onclick="scanSymbol()">Scan</button>
+    </div>
+    <button class="btn-market" id="scan-all-btn" onclick="startFullScan()">Scan Entire US Market</button>
+  </div>
+</header>
+
+<div id="status-bar"></div>
+
+<main>
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Filter by company name…" oninput="applyFilter()">
+    <select id="sort-select" onchange="applySort()">
+      <option value="score-desc">Score: High → Low</option>
+      <option value="score-asc">Score: Low → High</option>
+      <option value="name-asc">Name: A → Z</option>
+      <option value="name-desc">Name: Z → A</option>
+    </select>
+    <select id="filter-pass" onchange="applyFilter()">
+      <option value="all">All companies</option>
+      <option value="pass">Passers only</option>
+      <option value="partial">Has partial data</option>
+    </select>
+    <div class="stats" id="stats-line">—</div>
+  </div>
+
+  <div class="table-wrap">
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th style="width:28px"></th>
+          <th onclick="setSortCol('name')">Company</th>
+          <th onclick="setSortCol('score')" class="sorted">Score</th>
+          <th class="criterion" title="1. Return on Equity ≥ 12% (10-yr avg)">ROE</th>
+          <th class="criterion" title="2. Return on Assets ≥ 12% (10-yr avg)">ROA</th>
+          <th class="criterion" title="3. EPS (diluted) trend — latest > earliest over 10 yrs">EPS</th>
+          <th class="criterion" title="4. Net Income Margin > 20% (10-yr avg)">NI%</th>
+          <th class="criterion" title="5. Gross Profit Margin > 40% (10-yr avg)">GP%</th>
+          <th class="criterion" title="6. Long-Term Debt / Net Income < 5× (latest year)">LTD</th>
+          <th class="criterion" title="7. Revenue CAGR > avg CPI inflation">Rev</th>
+          <th class="criterion" title="8. Return on Retained Capital > 11%">RORC</th>
+          <th class="criterion" title="9. Dividend history — 0 cuts, ≥7 of 9 YoY increases">Div</th>
+          <th class="criterion" title="10. Share buybacks ≥ 8 of 10 years">BB</th>
+          <th style="width:24px"></th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <tr><td colspan="14" class="empty"><h3>No results loaded</h3><p>Enter a ticker above or click "Scan Entire US Market"</p></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="pagination" style="margin-top:10px;text-align:center;display:none"></div>
+</main>
+
+<!-- Full scan progress overlay -->
+<div id="progress-overlay">
+  <div class="progress-card">
+    <h2>Scanning US Market…</h2>
+    <p id="progress-company">Starting…</p>
+    <div class="progress-bar-wrap"><div class="progress-bar" id="progress-bar" style="width:0%"></div></div>
+    <div class="progress-stats">
+      <div><b id="p-processed">0</b>Companies</div>
+      <div><b id="p-passed">0</b>Passers</div>
+      <div><b id="p-errors">0</b>Errors</div>
+    </div>
+    <p style="font-size:11px;color:var(--muted);margin-bottom:12px">This may take 20–30 minutes. Results update live.</p>
+    <button id="cancel-scan" onclick="cancelScan()">Cancel</button>
+  </div>
+</div>
+
+<!-- Single symbol scan modal -->
+<div id="scan-modal">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// ── Constants ──────────────────────────────────────────────────────────────
+
+const CRITERIA_META = [
+  { id:1,  key:'roe',       label:'ROE',  name:'Return on Equity',           desc:'10-yr average ≥ 12%',               unit:'%',  higher_better:true  },
+  { id:2,  key:'roa',       label:'ROA',  name:'Return on Assets',           desc:'10-yr average ≥ 12%',               unit:'%',  higher_better:true  },
+  { id:3,  key:'eps',       label:'EPS',  name:'EPS Diluted Trend',          desc:'Latest > earliest over 10 years',   unit:'$/sh',higher_better:true  },
+  { id:4,  key:'ni_margin', label:'NI%',  name:'Net Income Margin',          desc:'10-yr average > 20%',               unit:'%',  higher_better:true  },
+  { id:5,  key:'gp_margin', label:'GP%',  name:'Gross Profit Margin',        desc:'10-yr average > 40%',               unit:'%',  higher_better:true  },
+  { id:6,  key:'ltd_ni',    label:'LTD',  name:'Long-Term Debt / Net Income',desc:'Latest year < 5×',                  unit:'×',  higher_better:false },
+  { id:7,  key:'revenue',   label:'Rev',  name:'Revenue vs Inflation',       desc:'Revenue CAGR > avg CPI growth',     unit:'$',  higher_better:true  },
+  { id:8,  key:'rorc',      label:'RORC', name:'Return on Retained Capital', desc:'> 11%',                             unit:'%',  higher_better:true  },
+  { id:9,  key:'dps',       label:'Div',  name:'Dividend History',           desc:'0 cuts, ≥7 of 9 YoY increases',    unit:'$/sh',higher_better:true  },
+  { id:10, key:'buybacks',  label:'BB',   name:'Share Buybacks',             desc:'Repurchasing in ≥8 of 10 years',   unit:'$',  higher_better:true  },
+];
+
+const PAGE_SIZE = 50;
+
+// ── State ──────────────────────────────────────────────────────────────────
+
+let allCompanies = [];
+let filtered = [];
+let currentPage = 0;
+let sortCol = 'score';
+let sortDir = 'desc';
+let scanSource = null;   // EventSource for scan-all
+let expandedRows = new Set();
+
+// ── Boot ───────────────────────────────────────────────────────────────────
+
+const IS_LOCAL = ['localhost', '127.0.0.1'].includes(window.location.hostname) ||
+                 window.location.hostname.startsWith('192.168.') ||
+                 window.location.hostname.startsWith('10.');
+
+window.addEventListener('DOMContentLoaded', async () => {
+  if (!IS_LOCAL) {
+    // Cloud mode (Cloudflare Pages): load static results, disable live scan
+    document.getElementById('scan-btn').disabled = true;
+    document.getElementById('scan-btn').title = 'Live scan requires the local server (node bin/serve.js)';
+    document.getElementById('scan-all-btn').disabled = true;
+    document.getElementById('scan-all-btn').title = 'Full market scan runs automatically via GitHub Actions each week';
+    document.getElementById('scan-all-btn').textContent = 'Weekly scan via GitHub Actions';
+    try {
+      const res = await fetch('/data/results.json');
+      if (res.ok) {
+        const data = await res.json();
+        loadData(data.companies, data.generated_at);
+      } else {
+        showStatus('No scan results yet — the GitHub Actions weekly scan has not run yet.', 'info');
+      }
+    } catch {
+      showStatus('Could not load results. The weekly GitHub Actions scan may not have run yet.', 'error');
+    }
+    return;
+  }
+
+  // Local server mode: full live-scan capability
+  try {
+    const res = await fetch('/api/results');
+    if (res.ok) {
+      const data = await res.json();
+      loadData(data.companies, data.generated_at);
+    } else {
+      showStatus('No scan results found. Run a scan to get started.', 'info');
+    }
+  } catch {
+    showStatus('Could not reach the server. Make sure node bin/serve.js is running.', 'error');
+  }
+
+  try {
+    const st = await fetch('/api/status').then(r => r.json());
+    if (!st.zip_ready) showStatus('companyfacts.zip not found — run: node bin/setup.js', 'error');
+  } catch { /* offline */ }
+
+  document.getElementById('symbol-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') scanSymbol();
+  });
+});
+
+// ── Data loading ───────────────────────────────────────────────────────────
+
+function loadData(companies, generatedAt) {
+  allCompanies = companies.filter(c => c.summary);
+  applyFilter();
+  if (generatedAt) {
+    const age = ((Date.now() - new Date(generatedAt)) / 3600000).toFixed(0);
+    document.getElementById('stats-line').textContent =
+      `Generated ${age}h ago · ${allCompanies.length.toLocaleString()} companies`;
+  }
+}
+
+// ── Filtering & sorting ────────────────────────────────────────────────────
+
+function applyFilter() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const pass = document.getElementById('filter-pass').value;
+  filtered = allCompanies.filter(c => {
+    if (q && !c.name?.toLowerCase().includes(q) && !String(c.cik).includes(q)) return false;
+    if (pass === 'pass' && c.summary.pass_count < 8) return false;
+    if (pass === 'partial' && !c.data_quality) return false;
+    return true;
+  });
+  applySort();
+}
+
+function applySort() {
+  const sel = document.getElementById('sort-select').value;
+  const [col, dir] = sel.split('-');
+  sortCol = col; sortDir = dir;
+  filtered.sort((a, b) => {
+    let va = col === 'score' ? (a.summary?.pass_count ?? -1) : (a.name ?? '');
+    let vb = col === 'score' ? (b.summary?.pass_count ?? -1) : (b.name ?? '');
+    if (dir === 'desc') return vb > va ? 1 : vb < va ? -1 : 0;
+    return va > vb ? 1 : va < vb ? -1 : 0;
+  });
+  currentPage = 0;
+  renderTable();
+}
+
+function setSortCol(col) {
+  const sel = document.getElementById('sort-select');
+  const [c, d] = sel.value.split('-');
+  sel.value = col + '-' + (c === col && d === 'desc' ? 'asc' : 'desc');
+  applySort();
+}
+
+// ── Table rendering ────────────────────────────────────────────────────────
+
+function renderTable() {
+  const tbody = document.getElementById('table-body');
+  const start = currentPage * PAGE_SIZE;
+  const page = filtered.slice(start, start + PAGE_SIZE);
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="14" class="empty"><h3>No companies match</h3><p>Try a different filter or run a new scan.</p></td></tr>`;
+    document.getElementById('pagination').style.display = 'none';
+    document.getElementById('stats-line').textContent = `0 companies`;
+    return;
+  }
+
+  tbody.innerHTML = '';
+  page.forEach(c => tbody.appendChild(buildRow(c)));
+  renderPagination();
+
+  const total = filtered.length;
+  const shown = Math.min(start + PAGE_SIZE, total);
+  document.getElementById('stats-line').textContent =
+    `Showing ${start+1}–${shown} of ${total.toLocaleString()} companies`;
+}
+
+function buildRow(c) {
+  const tr = document.createElement('tr');
+  tr.dataset.cik = c.cik;
+  if (expandedRows.has(String(c.cik))) tr.classList.add('expanded');
+
+  const score = c.summary.pass_count;
+  const applicable = c.summary.total - c.summary.null_count;
+  const scoreClass = score >= 8 ? 'score-high' : score >= 5 ? 'score-mid' : 'score-low';
+
+  const qualWarn = c.data_quality
+    ? `<span title="${c.data_quality.join(', ')}" style="margin-left:4px;font-size:11px">⚠️</span>` : '';
+
+  let html = `
+    <td><button class="expand-btn" onclick="toggleExpand('${c.cik}')">${expandedRows.has(String(c.cik)) ? '▼' : '▶'}</button></td>
+    <td class="name-cell">${esc(c.name ?? 'Unknown')}${qualWarn}<br><span class="ticker">CIK ${c.cik}${c.fiscal_years ? ' · ' + c.fiscal_years[0] + '–' + c.fiscal_years[1] : ''}</span></td>
+    <td class="score-cell"><span class="score-badge ${scoreClass}">${score}/${applicable}</span></td>`;
+
+  (c.criteria ?? []).forEach(cr => { html += `<td class="crit-cell">${pillHtml(cr)}</td>`; });
+
+  // Fill missing criteria columns
+  for (let i = (c.criteria ?? []).length; i < 10; i++) {
+    html += `<td class="crit-cell"><span class="pill pill-na" title="No data">—</span></td>`;
+  }
+  html += `<td></td>`;
+  tr.innerHTML = html;
+  return tr;
+}
+
+function pillHtml(cr) {
+  if (cr.not_applicable) return `<span class="pill pill-na" title="Not applicable (no data available)">—</span>`;
+  if (cr.pass === true)  return `<span class="pill pill-pass" title="${criterionTitle(cr)}">✓</span>`;
+  if (cr.pass === false) return `<span class="pill pill-fail" title="${criterionTitle(cr)}">✗</span>`;
+  return `<span class="pill pill-warn" title="Insufficient data">?</span>`;
+}
+
+function criterionTitle(cr) {
+  const meta = CRITERIA_META[cr.id - 1];
+  const val = cr.value != null ? ` · ${typeof cr.value === 'number' ? cr.value : cr.value}${cr.unit ? ' ' + cr.unit : ''}` : '';
+  return `${meta?.name ?? ''}${val}`;
+}
+
+// ── Detail (expand) panel ──────────────────────────────────────────────────
+
+function toggleExpand(cik) {
+  const key = String(cik);
+  const company = allCompanies.find(c => String(c.cik) === key)
+    || filtered.find(c => String(c.cik) === key);
+  if (!company) return;
+
+  if (expandedRows.has(key)) {
+    expandedRows.delete(key);
+  } else {
+    expandedRows.add(key);
+  }
+  renderTable();
+
+  // Inject detail row after the company row
+  if (expandedRows.has(key)) {
+    const tr = document.querySelector(`tr[data-cik="${cik}"]`);
+    if (!tr) return;
+    const detailTr = document.createElement('tr');
+    detailTr.classList.add('detail-row');
+    detailTr.dataset.detailFor = cik;
+    const td = document.createElement('td');
+    td.colSpan = 14;
+    td.className = 'detail-panel';
+    td.innerHTML = buildDetailPanel(company);
+    detailTr.appendChild(td);
+    tr.after(detailTr);
+  }
+}
+
+function buildDetailPanel(c) {
+  const t = c.trend_5y;
+  const years = t?.years ?? [];
+
+  let html = '<div class="detail-grid">';
+  CRITERIA_META.forEach((meta, i) => {
+    const cr = c.criteria?.[i];
+    const trendValues = t ? t[meta.key] : null;
+    const passClass = !cr ? 'mc-na' : cr.not_applicable ? 'mc-na' : cr.pass === true ? 'mc-pass' : cr.pass === false ? 'mc-fail' : 'mc-na';
+    const passLabel = !cr ? 'N/A' : cr.not_applicable ? 'N/A' : cr.pass === true ? 'PASS' : cr.pass === false ? 'FAIL' : '?';
+    const val = cr?.value != null ? (typeof cr.value === 'number' ? cr.value + (cr.unit ? ' ' + cr.unit : '') : cr.value) : '—';
+
+    const hasData = trendValues && trendValues.some(v => v != null);
+    const noDataWarn = !hasData
+      ? `<span class="data-warn">⚠ insufficient data</span>`
+      : '';
+
+    html += `
+      <div class="metric-card">
+        <div class="mc-header">
+          <span class="mc-name">#${meta.id} ${meta.name}</span>
+          <span class="mc-badge ${passClass}">${passLabel}</span>
+        </div>
+        <div class="mc-value">${val}</div>
+        <div class="mc-desc">${meta.desc}</div>
+        ${noDataWarn}
+        ${hasData ? `<div class="sparkline-wrap">${sparklineSvg(trendValues, meta.higher_better, meta.id === 10)}</div>
+        <div class="sparkline-label"><span>${years[0] ?? ''}</span><span>${years[years.length-1] ?? ''}</span></div>` : ''}
+      </div>`;
+  });
+  html += '</div>';
+
+  if (c.data_quality) {
+    html += `<div style="margin-top:10px"><span class="data-warn">⚠ Data quality flags: ${c.data_quality.join(', ')}</span></div>`;
+  }
+  return html;
+}
+
+// ── Sparkline SVG ─────────────────────────────────────────────────────────
+
+function sparklineSvg(values, higherBetter = true, isBuybacks = false) {
+  const W = 160, H = 34, pad = 3;
+  const vals = values ?? [];
+
+  if (isBuybacks) {
+    // Buybacks: bar chart of yes/no
+    const n = vals.length;
+    const bw = (W - pad * 2) / n;
+    let bars = '';
+    vals.forEach((v, i) => {
+      const active = v != null && v > 0;
+      bars += `<rect x="${pad + i * bw + 1}" y="${active ? pad : H - pad - 8}" width="${bw - 2}" height="${active ? H - pad * 2 : 8}" fill="${active ? '#16a34a' : '#e5e7eb'}" rx="2"/>`;
+    });
+    return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${bars}</svg>`;
+  }
+
+  const clean = vals.filter(v => v != null);
+  if (clean.length < 2) return `<svg width="${W}" height="${H}"></svg>`;
+
+  const min = Math.min(...clean);
+  const max = Math.max(...clean);
+  const range = max - min || 1;
+
+  const points = [];
+  vals.forEach((v, i) => {
+    if (v == null) return;
+    const x = pad + (i / (vals.length - 1)) * (W - pad * 2);
+    const y = (H - pad) - ((v - min) / range) * (H - pad * 2);
+    points.push([x, y]);
+  });
+
+  const first = clean[0], last = clean[clean.length - 1];
+  const trending = higherBetter ? (last >= first) : (last <= first);
+  const color = trending ? '#16a34a' : '#dc2626';
+  const fillColor = trending ? '#dcfce7' : '#fee2e2';
+
+  const pointStr = points.map(p => p.join(',')).join(' ');
+  const area = `${points[0][0]},${H - pad} ` + pointStr + ` ${points[points.length-1][0]},${H - pad}`;
+
+  return `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+    <polygon points="${area}" fill="${fillColor}" opacity=".5"/>
+    <polyline points="${pointStr}" fill="none" stroke="${color}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    ${points.map(([x,y]) => `<circle cx="${x}" cy="${y}" r="2.5" fill="${color}"/>`).join('')}
+  </svg>`;
+}
+
+// ── Pagination ─────────────────────────────────────────────────────────────
+
+function renderPagination() {
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  const pg = document.getElementById('pagination');
+  if (totalPages <= 1) { pg.style.display = 'none'; return; }
+  pg.style.display = 'block';
+  pg.innerHTML = '';
+  const mkBtn = (label, page, disabled) => {
+    const b = document.createElement('button');
+    b.className = 'btn-sm btn-primary';
+    b.textContent = label;
+    b.disabled = disabled;
+    b.style.margin = '0 3px';
+    b.onclick = () => { currentPage = page; renderTable(); window.scrollTo(0,0); };
+    pg.appendChild(b);
+  };
+  mkBtn('« Prev', currentPage - 1, currentPage === 0);
+  const span = document.createElement('span');
+  span.style.cssText = 'margin:0 10px;font-size:13px;color:var(--muted)';
+  span.textContent = `Page ${currentPage + 1} of ${totalPages}`;
+  pg.appendChild(span);
+  mkBtn('Next »', currentPage + 1, currentPage >= totalPages - 1);
+}
+
+// ── Single symbol scan ─────────────────────────────────────────────────────
+
+async function scanSymbol() {
+  const input = document.getElementById('symbol-input');
+  const symbol = input.value.trim();
+  if (!symbol) return;
+
+  const btn = document.getElementById('scan-btn');
+  btn.disabled = true;
+  btn.textContent = '…';
+  showModal(`<div style="text-align:center;padding:40px 0"><p style="color:var(--muted)">Scanning ${esc(symbol)}…</p></div>`);
+
+  try {
+    const res = await fetch(`/api/scan?symbol=${encodeURIComponent(symbol)}`);
+    const data = await res.json();
+    if (!res.ok) { showModal(`<p style="color:var(--fail)">${esc(data.error)}</p>`); return; }
+
+    const sc = data.scorecard ?? data.record;
+    showModal(buildScanResult(sc, data.record));
+  } catch (err) {
+    showModal(`<p style="color:var(--fail)">Error: ${esc(err.message)}</p>`);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Scan';
+  }
+}
+
+function buildScanResult(sc, compact) {
+  if (!sc) return '<p style="color:var(--muted)">No data returned.</p>';
+
+  const name = sc.company?.name ?? compact?.name ?? '—';
+  const cik = sc.company?.cik ?? compact?.cik ?? '—';
+  const fys = sc.fiscal_years ?? (compact?.fiscal_years ? `${compact.fiscal_years[0]}–${compact.fiscal_years[1]}` : null);
+  const fyStr = Array.isArray(fys) ? `${fys[0]}–${fys[fys.length-1]}` : (fys ?? '');
+  const summary = sc.summary ?? compact?.summary ?? {};
+  const applicable = summary.total - (summary.null_count ?? 0);
+  const scoreClass = summary.pass_count >= 8 ? 'score-high' : summary.pass_count >= 5 ? 'score-mid' : 'score-low';
+
+  const criteria = sc.criteria ?? compact?.criteria ?? [];
+  const t = compact?.trend_5y;
+  const years = t?.years ?? [];
+
+  let html = `
+    <div class="modal-company">${esc(name)}</div>
+    <div class="modal-meta">CIK ${cik} · Fiscal years: ${fyStr}</div>
+    <div style="margin-bottom:16px"><span class="score-badge ${scoreClass}">${summary.pass_count}/${applicable} criteria pass</span></div>
+    <div class="modal-criteria">`;
+
+  CRITERIA_META.forEach((meta, i) => {
+    const cr = criteria[i];
+    if (!cr) return;
+    const passClass = cr.not_applicable ? 'mc-na' : cr.pass === true ? 'mc-pass' : cr.pass === false ? 'mc-fail' : 'mc-na';
+    const passLabel = cr.not_applicable ? 'N/A' : cr.pass === true ? 'PASS' : cr.pass === false ? 'FAIL' : '?';
+    const val = cr.value != null ? (typeof cr.value === 'number' ? cr.value + (cr.unit ? ' ' + cr.unit : '') : cr.value) : '—';
+    const trendValues = t ? t[meta.key] : null;
+    const hasData = trendValues && trendValues.some(v => v != null);
+
+    html += `
+      <div class="metric-card">
+        <div class="mc-header">
+          <span class="mc-name">#${meta.id} ${meta.name}</span>
+          <span class="mc-badge ${passClass}">${passLabel}</span>
+        </div>
+        <div class="mc-value">${val}</div>
+        <div class="mc-desc">${meta.desc}</div>
+        ${!hasData ? `<span class="data-warn">⚠ insufficient data</span>` : `
+        <div class="sparkline-wrap">${sparklineSvg(trendValues, meta.higher_better, meta.id === 10)}</div>
+        <div class="sparkline-label"><span>${years[0] ?? ''}</span><span>${years[years.length-1] ?? ''}</span></div>`}
+      </div>`;
+  });
+
+  html += '</div>';
+
+  const dq = compact?.data_quality;
+  if (dq) html += `<div style="margin-top:12px"><span class="data-warn">⚠ Data quality flags: ${dq.join(', ')}</span></div>`;
+
+  return html;
+}
+
+// ── Modal helpers ──────────────────────────────────────────────────────────
+
+function showModal(html) {
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('scan-modal').classList.add('active');
+}
+function closeModal() {
+  document.getElementById('scan-modal').classList.remove('active');
+}
+document.getElementById('scan-modal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('scan-modal')) closeModal();
+});
+
+// ── Full market scan ───────────────────────────────────────────────────────
+
+function startFullScan() {
+  if (scanSource) return;
+  const overlay = document.getElementById('progress-overlay');
+  overlay.classList.add('active');
+  document.getElementById('scan-all-btn').disabled = true;
+
+  const TOTAL_EST = 12000;
+  scanSource = new EventSource('/api/scan-all?threshold=8');
+
+  scanSource.onmessage = (e) => {
+    const msg = JSON.parse(e.data);
+
+    if (msg.type === 'progress') {
+      const pct = Math.min((msg.processed / TOTAL_EST) * 100, 99).toFixed(0);
+      document.getElementById('progress-bar').style.width = pct + '%';
+      document.getElementById('p-processed').textContent = msg.processed.toLocaleString();
+      document.getElementById('p-passed').textContent = msg.passed.toLocaleString();
+      document.getElementById('p-errors').textContent = msg.errors.toLocaleString();
+      document.getElementById('progress-company').textContent = msg.name ?? '';
+    }
+
+    if (msg.type === 'complete') {
+      finishScan(msg);
+    }
+
+    if (msg.type === 'error') {
+      endScan();
+      showStatus('Scan error: ' + msg.message, 'error');
+    }
+  };
+
+  scanSource.onerror = () => {
+    endScan();
+    showStatus('Connection lost during scan.', 'error');
+  };
+}
+
+async function finishScan(msg) {
+  endScan();
+  document.getElementById('progress-bar').style.width = '100%';
+  // Reload results
+  try {
+    const res = await fetch('/api/results');
+    if (res.ok) {
+      const data = await res.json();
+      loadData(data.companies, data.generated_at);
+      showStatus(`Scan complete — ${msg.processed.toLocaleString()} companies, ${msg.passed} passers.`, 'info');
+    }
+  } catch { /* ignore */ }
+}
+
+function cancelScan() { endScan(); }
+
+function endScan() {
+  if (scanSource) { scanSource.close(); scanSource = null; }
+  document.getElementById('progress-overlay').classList.remove('active');
+  document.getElementById('scan-all-btn').disabled = false;
+}
+
+// ── Status bar ─────────────────────────────────────────────────────────────
+
+function showStatus(msg, type = '') {
+  const bar = document.getElementById('status-bar');
+  bar.textContent = msg;
+  bar.className = type;
+  bar.style.display = 'block';
+  if (type === 'info') setTimeout(() => { bar.style.display = 'none'; }, 6000);
+}
+
+// ── Utilities ──────────────────────────────────────────────────────────────
+
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>

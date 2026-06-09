@@ -1,0 +1,53 @@
+name: Weekly scan
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Every Monday 06:00 UTC
+  workflow_dispatch:        # Allow manual trigger from the Actions tab
+
+permissions:
+  contents: write           # Required to commit results back to the repo
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      # The SEC companyfacts.zip contains historical 10-K filings that do not
+      # change.  A permanent cache key means the zip is downloaded exactly once
+      # and reused on every subsequent run.  Bump the key suffix (v1 → v2) only
+      # if you deliberately want a fresh copy of the archive.
+      - name: Restore zip cache
+        id: zip-cache
+        uses: actions/cache@v4
+        with:
+          path: data/companyfacts.zip
+          key: companyfacts-permanent-v1
+
+      - name: Download zip (only if not cached)
+        if: steps.zip-cache.outputs.cache-hit != 'true'
+        run: node bin/ingest.js --download
+        env:
+          SEC_USER_AGENT: "fundamental-screener ${{ github.repository_owner }}@users.noreply.github.com"
+
+      - name: Process universe
+        run: node bin/ingest.js --process --threshold 8
+        env:
+          SEC_USER_AGENT: "fundamental-screener ${{ github.repository_owner }}@users.noreply.github.com"
+          PASS_THRESHOLD: "8"
+
+      - name: Commit and push results
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/results.json data/passers.json
+          git diff --staged --quiet || git commit -m "chore: weekly scan $(date +%Y-%m-%d)"
+          git push
